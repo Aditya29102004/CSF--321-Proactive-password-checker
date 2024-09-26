@@ -209,7 +209,7 @@ int valid_password_checker(char new_pass[],struct User user,int prev,int attempt
     // printf("%s", date_of_birth_digits);
     int len=strlen(new_pass); 
     int maxi=0;
-  
+  for(strlen(new_pass)>3){
     for(int i=0;i<strlen(new_pass) - 3;i++){
       if (new_pass[i] == date_of_birth_digits[0] && new_pass[i+1] == date_of_birth_digits[1] && new_pass[i+2] == date_of_birth_digits[2] && new_pass[i+3] == date_of_birth_digits[3]){
         maxi = 4;
@@ -226,6 +226,7 @@ int valid_password_checker(char new_pass[],struct User user,int prev,int attempt
       if (new_pass[i] == date_of_birth_digits[4] && new_pass[i+1] == date_of_birth_digits[5] && new_pass[i+2] == date_of_birth_digits[6] && new_pass[i+3] == date_of_birth_digits[7]){
         maxi = 4;
       }
+    }
       
     }
 
